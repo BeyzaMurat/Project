@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+    
+      body{
+          font-family: 'Poppins', sans-serif;
+          background-color: #eff5f5;
+      }
+      
+      .active{
+          border-color: #ffc107!important;
+      }
+      
+      .card{
+          padding-bottom: 25px;
+          box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+      }
+      .card-text{
+          font-size: 14px!important;
+      }
+      .month{
+          color: rgb(118, 125, 125);
+          font-size: 18px;
+      }
+      .doller, .bi{
+          color: #ffc107!important;
+      }
+      .line{
+          height: 2px;
+          background-color: #ffc107!important;
+          width: 140px;
+          margin: auto;
+      }
