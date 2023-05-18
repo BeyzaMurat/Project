@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap');
+:root {
+    --primary: #0d6efd;
+    --dark: #21252f;
+    --body: #888;
+    --white: #ffffff;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+img{
+    width: 100%;
+}
+
+body{
+    font-family: "Sora", sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+.section-padding{
+    padding-top: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+
+p{
+    color: #888;
+   }
+
+.logo{
+    width: 160px;
+}
+
+h1,h2,h3,h4,h5,h6,
+.display-4 {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+/*NAV*/
+.navbar {
+    box-shadow: var(--box-shadow);
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary) !important;
+}
+
+.nav-link:hover {
+    color: black;
+}
+
+.navbar .btn {
+    padding: 14px 18px;
+    border-width: 2px;
+    border-radius: 0;
+}
+/*NAV*/
+
+/*HERO*/
+.hero{
+    background-image: url(../Kreativee/cover.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2;
+}
+
+.hero::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: rgba(21,20,51,0.8);
+ }
+
+.hero .btn{
+        border-radius: 0;
+        margin-right: 5px;
+        padding: 10px 20px;
+        font-size: 17px;
+    }
+
+/*HERO*/
+
+/*SERVICES*/
+  .iconbox {
+    width: 54px;
+    height: 54px;
+    /*ortala*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background-color: #0d6efd;
+    color: white;
+    border-radius: 100%;
+  }
+
+  .service {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.service::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+
+.service:hover .iconbox {
+    background-color: var(--white);
+    color: var(--primary);
+}
+
+.service:hover h5,
+.service:hover p {
+    color: var(--white);;
+}
+
+.service:hover::after {
+    opacity: 1;
+    top: 0;
+}
+/*SERVICES*/
+
+/*FEATURES*/
+    .feature .col-img{
+        background-image: url(../Kreativee/cover2.jpg);
+        min-height: 500px;
+        background-position: center;
+        background-size: cover;
+    }
+    .col-text p{
+        text-align: justify;
+        font-size: 17px;
+        line-height: 30px;
+    }
+
+.col-text h1{
+font-size: 25px;
+font-weight: bold;
+ }
+    /*FEATURES*/
+
+
+    /*PROJECT*/
+.project {
+        position: relative;
+        overflow: hidden;
+ }
+ .project-text h1,
+ .project-text p{
+    color: white;
+}
+
+.project .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(21, 20, 51, 0.8);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.project img {
+    transition: all 0.4s ease;   
+}
+
+.project:hover .overlay{
+    opacity: 1;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+.card-effect {
+    box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+    background-color: white;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+     /*PROJECT*/
+
+      /*PRICING*/
+.pricing ul li{
+    font-size: 17px;
+   }
+
+.pricing i{
+    color:  #0d6efd;
+    border-radius: 100%;
+    font-size: 20px;
+}
+
+/*PRICING*/
+ /*TEAM*/
+.team img{
+    border-radius: 100%;
+    width: 130px;
+}
+
+.team h5{
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.social-icons i{
+    background-color: #0d6efd;
+    color: white;
+    width: 34px;
+    height: 34px;
+    border-radius: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    border: 2px solid #0d6efd;
+
+}
+
+.social-icons i:hover{
+   background-color: white;
+   color: #0d6efd;
+}
+    /*TEAM*/
+
+/*BLOG*/
+.blog p {
+    text-align: justify;
+}
+
+/*CONTACT*/
+form input.form-control {
+        height: 56px;
+ }
+
+form .form-control {
+    border: transparent;
+    border-radius: 0;
+    background-color: rgba(0,0,0,0.02);
+}
+
+/*FOOTER*/
+.footer-top img{
+width: 250px;
+}
+
+.footer-top ul li{
+    color: #888;
+}
+
+.footer-top {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    background-color: #242933;
+}
+
+.footer-top a {
+    color: #888;
+}
+
+.footer-top a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    background-color: #242933;
+}     /*FOOTER*/
